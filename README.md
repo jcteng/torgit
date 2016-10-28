@@ -82,7 +82,8 @@ git-http-protocol 中smart http使用了chunked的传输方式，这里主要借
 
 
 - 此时可使用access_url访问torgit提供的git服务  
->   git clone http://127.0.0.1:8000/git/user2p/repo2.git
+
+> git clone http://127.0.0.1:8000/git/user2p/repo2.git
 
 ## 如何使用-code  
 
