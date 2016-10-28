@@ -11,10 +11,16 @@ git-http-protocol 中smart http使用了chunked的传输方式，这里主要借
 
 
 - 将代码clone到本地  
+
 >   git clone https://github.com/jcteng/torgit.git
 
 - 安装依赖项  
+
 >   pip install -r requirements.txt
+
+- python2.7需额外安装backports.ssl_match_hostname  
+
+>   pip install backports.ssl_match_hostname
 
 - 运行演示  
 
