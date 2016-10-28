@@ -1,0 +1,11 @@
+{"user1p":{"repo1":{"anonymous_read":true,"anonymous_write":false,
+                       "read_users":[],
+                       "write_users":["user1"]
+                      }
+            },
+ "user2p":{"repo2":{"anonymous_read":false,"anonymous_write":false,
+                        "read_users":["user1","user2"],
+                        "write_users":["user1"]
+                    }
+           }
+ }

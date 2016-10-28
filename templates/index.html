@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1>Hello ,Torgit!</h1>
+<hr>
+<h3>User List</h3>
+        <table border="1">
+        <thead>
+            <th>user</th>
+            <th>password</th>
+        </thead>
+        <tbody>
+           {% for user,pwd in manager.auth_dict.items() %}
+            <tr>
+                <td>{{user}}</td>
+                <td>{{pwd}}</td>
+            </tr>
+           {% end %}
+        </tbody>
+        </table>
+<h3>Repo List</h3>
+        <table border="1">
+        <thead>
+            <th>prefix</th>
+            <th>repos</th>
+            <th>permission</th>
+            <th>access_url</th>
+        </thead>
+        <tbody>
+           {% for prefix,repos in manager.repo_dict.items() %}
+                {% for repo,permission in repos.items() %}
+
+                    <tr>
+                        <td>{{prefix}}</td>
+                        <td>{{repo}}</td>
+                        <td>{{permission}}</td>
+                        <td>{{request.protocol}}://{{request.host}}{{manager.get_url(prefix,repo)}}</td>
+                    </tr>
+                {% end %}
+           {% end %}
+        </tbody>
+        </table>
+</body>
+</html>
